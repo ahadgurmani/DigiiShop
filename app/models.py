@@ -10,7 +10,7 @@ class Product(models.Model):
     price = models.FloatField()
     brand = models.CharField(max_length= 200)
     description = models.TextField()
-    image = models.ImageField(upload_to= "productimg")
+    image = models.ImageField(upload_to= "productimg" , null= True, blank= True)
     catagory = models.CharField(choices= catagory_choose, max_length=4)
     def __str__(self):
         return self.title
